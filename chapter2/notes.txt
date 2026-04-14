@@ -1,0 +1,27 @@
+The Scanf method of the fmt package:
+    - This method returns an error, this is very useful is for example I want to use a signed integer and the user
+    inserts a negative number, I can catch that error quickly before it makes a bigger mess
+
+Float numbers in go:
+    - Turns out that using floats in go is a little bit more risking that I thought it would be, specially speaking about
+    the currency convertion and the "==" or "!=" comparison operators, since a float is not the exact decimal number 
+    but just an aproximation, I have to be careful when using this data type in order to not mess up currency convertions
+    or doing comparisons that might not work as I expect, a bug like this in a production codebase could be hard to spot
+    and also could be really dangerous.
+
+#
+“If you are declaring multiple variables at once, you can wrap them in a declaration list:
+
+var (
+    x    int
+    y        = 20
+    z    int = 30
+    d, e     = 40, "hello"
+    f, g string
+)”
+
+Excerpt From
+Learning Go (for Mark nefedov)
+Jon Bodner
+This material may be protected by copyright.
+#
