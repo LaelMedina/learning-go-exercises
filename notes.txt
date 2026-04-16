@@ -25,3 +25,10 @@ Learning Go (for Mark nefedov)
 Jon Bodner
 This material may be protected by copyright.
 #
+
+CHAPTER 3
+    - GO is a call-by-value language, which means, the built-in functions take in copies of the values and return said copies.
+    Way safer than using pointer which might cause unexpected memory erros.c
+    - The slice of a slice shares the same memory with the slice it was sliced from, it means, changes in one slice will
+    be reflected in the other, to avoid bugs or unexpected slice overrides, it's better to avoid making slices from slices
+    or use a three-part slice expression to prevent "append" from sharing capacity between slices.
