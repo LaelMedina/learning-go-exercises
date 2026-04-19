@@ -3,15 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	letters := []string{"a", "b", "c", "d"}
+	odds := []int{1, 3, 5, 7}
 
-	slice := letters[:]
+	oddsCopy := make([]int, 4)
 
-	fmt.Printf("cap(letters): %d    cap(slice): %d\n", cap(letters), cap(slice))
+	result := copy(oddsCopy, odds)
 
-	slice = append(slice, "e")
-
-	fmt.Printf("cap(letters): %d    cap(slice): %d\n", cap(letters), cap(slice))
-	fmt.Println("letters:", letters)
-	fmt.Println("slice:", slice)
+	fmt.Println(oddsCopy, result)
 }

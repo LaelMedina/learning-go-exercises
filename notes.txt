@@ -32,3 +32,6 @@ CHAPTER 3
     - The slice of a slice shares the same memory with the slice it was sliced from, it means, changes in one slice will
     be reflected in the other, to avoid bugs or unexpected slice overrides, it's better to avoid making slices from slices
     or use a three-part slice expression to prevent "append" from sharing capacity between slices.
+
+    - The built-in "len" function in go, counts the length of the string (for example) by the bites it has rather than the amount of
+    code points, so, this string "Hello 👍" length would be 10 instead of 7 since the "👍" emoji takes 4 bytes instead of 1
