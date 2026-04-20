@@ -2,12 +2,30 @@ package main
 
 import "fmt"
 
+/*
+“Write a program that defines a variable named greetings of type slice of strings with the following values:
+"Hello", "Hola", "नमस्कार", "こんにちは", and "Привіт". Create a subslice containing the first two values;
+a second subslice with the second, third, and fourth values; and a third subslice with the fourth and fifth values.
+Print out all four slices.”
+
+Excerpt From
+Learning Go (for Mark nefedov)
+Jon Bodner
+This material may be protected by copyright.
+*/
 func main() {
-	odds := []int{1, 3, 5, 7}
+	greetings := []string{"Hello", "Hola", "नमस्कार", "こんにちは", "Привіт"}
 
-	oddsCopy := make([]int, 4)
+	firstTwo := make([]string, 2)
+	copy(firstTwo, greetings[:2])
 
-	result := copy(oddsCopy, odds)
+	secondThirtFourth := make([]string, 3)
+	copy(secondThirtFourth, greetings[1:4])
 
-	fmt.Println(oddsCopy, result)
+	fourthFifth := make([]string, 2)
+	copy(fourthFifth, greetings[3:])
+
+	fmt.Println("First two: \t\t", firstTwo)
+	fmt.Println("Second, Third, Fourth: \t", secondThirtFourth)
+	fmt.Println("Fourth, Fifth: \t\t", fourthFifth)
 }
